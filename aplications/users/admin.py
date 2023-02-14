@@ -1,3 +1,8 @@
 from django.contrib import admin
+from import_export.admin import ImportExportModelAdmin
+from aplications.users.models import *
 
-# Register your models here.
+
+@admin.register(Person)
+class ViewAdmin(ImportExportModelAdmin):
+    pass
